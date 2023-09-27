@@ -30,18 +30,19 @@ PostgreSQL y Yarn. Además, es personalizable a través de típicos archivos JSO
    dependencias y configurar las variables de entorno en poco tiempo, lo que te permite comenzar a desarrollar tu
    aplicación rápidamente.
 
-7. `Estandariza los Commits:` Este template fomenta el uso de mensajes de commit estandarizados siguiendo convenciones
-   específicas, lo que mejora la claridad y la trazabilidad de tus cambios en el repositorio. Para ello implementa:
+7. [Estandariza los Commits:](https://medium.com/nosolosoftware/estandariza-tus-commits-y-automatiza-tu-changelog-con-estas-herramientas-bb83c404f02f)
+   Este template fomenta el uso de mensajes de commit estandarizados siguiendo convenciones específicas, lo que mejora
+   la claridad y la trazabilidad de tus cambios en el repositorio. Para ello implementa:
 
    -  **Commitlint:** Determina si un mensaje de commit se adecúa a un estándar en concreto
    -  **Husky:** Ejecuta Commitlint antes de cada commit. Abortará el commit en caso de que el mensaje escrito no se
       adapte al estándar de Commitlint.
    -  **Commitizen:** Genera mensajes compatibles con Commitlint de una forma sencilla, a través de un wizard.
 
-8. `Automatiza el Changelog:` Utiliza herramientas como
-   [standard-version](https://github.com/conventional-changelog/standard-version) para automatizar la generación de
-   changelogs basados en los mensajes de commit, lo que simplifica la documentación de tus cambios. Para ello hace uso
-   de:
+8. [Automatiza el Changelog:](https://medium.com/nosolosoftware/estandariza-tus-commits-y-automatiza-tu-changelog-con-estas-herramientas-bb83c404f02f)
+   Utiliza herramientas como [standard-version](https://github.com/conventional-changelog/standard-version) para
+   automatizar la generación de changelogs basados en los mensajes de commit, lo que simplifica la documentación de tus
+   cambios. Para ello hace uso de:
 
    -  **Standard-version:** Se encarga de procesar los mensajes de commit para generar un Changelog y subir la versión
       del proyecto.
@@ -79,7 +80,7 @@ PostgreSQL y Yarn. Además, es personalizable a través de típicos archivos JSO
   $ yarn start:dev
 ```
 
-## ¿Cómo hacer commits estandarizados?
+## [¿Cómo hacer commits estandarizados?](https://medium.com/nosolosoftware/estandariza-tus-commits-y-automatiza-tu-changelog-con-estas-herramientas-bb83c404f02f)
 
 Para agregar archivos/carpetas a un commit en GIT, usaremos las formas usuales.
 
@@ -97,7 +98,7 @@ nos indica.
    yarn cz
 ```
 
-## ¿Cómo lanzar una versión nueva?
+## [¿Cómo lanzar una versión nueva?](https://medium.com/nosolosoftware/estandariza-tus-commits-y-automatiza-tu-changelog-con-estas-herramientas-bb83c404f02f)
 
 Para la primera versión (que no aumentará la versión del fichero `package.json`), ejecutamos:
 
