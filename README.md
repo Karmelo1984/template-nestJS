@@ -10,7 +10,7 @@ PostgreSQL y Yarn. Además, es personalizable a través de típicos archivos JSO
 
 ## Características de este `TEMPLATE`
 
-1. `Configuración Inicial:`` Este template proporciona una configuración inicial completa para proyectos NestJS,
+1. `Configuración Inicial:` Este template proporciona una configuración inicial completa para proyectos NestJS,
    eliminando la necesidad de realizar la instalación y configuración inicial por separado.
 
 2. `Uso de Docker:` Utiliza Docker para gestionar el entorno de desarrollo, lo que facilita la gestión de contenedores y
@@ -29,6 +29,22 @@ PostgreSQL y Yarn. Además, es personalizable a través de típicos archivos JSO
 6. `Fácil Inicio:` Con las instrucciones proporcionadas en este readme, puedes clonar el proyecto, instalar las
    dependencias y configurar las variables de entorno en poco tiempo, lo que te permite comenzar a desarrollar tu
    aplicación rápidamente.
+
+7. `Estandariza los Commits:` Este template fomenta el uso de mensajes de commit estandarizados siguiendo convenciones
+   específicas, lo que mejora la claridad y la trazabilidad de tus cambios en el repositorio. Para ello implementa:
+
+   -  **Commitlint:** Determina si un mensaje de commit se adecúa a un estándar en concreto
+   -  **Husky:** Ejecuta Commitlint antes de cada commit. Abortará el commit en caso de que el mensaje escrito no se
+      adapte al estándar de Commitlint.
+   -  **Commitizen:** Genera mensajes compatibles con Commitlint de una forma sencilla, a través de un wizard.
+
+8. `Automatiza el Changelog:` Utiliza herramientas como
+   [standard-version](https://github.com/conventional-changelog/standard-version) para automatizar la generación de
+   changelogs basados en los mensajes de commit, lo que simplifica la documentación de tus cambios. Para ello hace uso
+   de:
+
+   -  **Standard-version:** Se encarga de procesar los mensajes de commit para generar un Changelog y subir la versión
+      del proyecto.
 
 ## Ejecutar la aplicación
 
