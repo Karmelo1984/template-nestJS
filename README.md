@@ -79,6 +79,50 @@ PostgreSQL y Yarn. Además, es personalizable a través de típicos archivos JSO
   $ yarn start:dev
 ```
 
+## ¿Cómo hacer commits estandarizados?
+
+Para agregar archivos/carpetas a un commit en GIT, usaremos las formas usuales.
+
+```bash
+   git add archivo1.js archivo2.js ## Agrega archivos específicos.
+   git add "*.js" ## Agrega archivos por patrones.
+   git add -p ## Agrega cambios de forma interactiva.
+   git add directorio/ ## Agrega todos los archivos en un directorio.
+```
+
+Después usaremos el siguiente comando para abrir el wizard de commitizien, donde solo tendremos que seguir los pasos que
+nos indica.
+
+```bash
+   yarn cz
+```
+
+## ¿Cómo lanzar una versión nueva?
+
+Para la primera versión (que no aumentará la versión del fichero `package.json`), ejecutamos:
+
+```bash
+   yarn run release --first-release
+```
+
+Después para cada versión siguiente, solo tendremos que ejecutar:
+
+```bash
+   yarn run release
+```
+
+La subida de versión tiene en cuenta, entre otras, estas cosas:
+
+-  La versión se especifica como **MAJOR.MINOR.PATCH**.
+-  Si entre una versión y la siguiente sólo hay commits de **fix**, se incrementará la versión **PATCH**.
+-  Si entre una versión y la siguiente algún commit incluye **feat**, se incrementará la versión **MINOR** y la versión
+   **PATCH** volverá a cero.
+-  Si entre una versión y la siguiente algún commit lleva especificado un **BREAKING CHANGE**, se aumentará la versión
+   **MAJOR**, devolviendo las versiones **MINOR** y **PATCH** a cero.
+
+Por defecto, en el changelog, sólo se incluyen los commits que marquen un **BREAKING CHANGE**, **feat** y **fix**.
+Aunque esto es posible configurarlo a gusto en la propia herramienta.
+
 ## Contacto
 
 -  Author - [Carmelo Molero Castillo](https://linkedin.com/in/carmelomolerocastillo)
