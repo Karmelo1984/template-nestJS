@@ -4,17 +4,31 @@
 
 ## Descripción
 
-[Template-NestJS](https://github.com/Karmelo1984/template-nestJS) es una plantilla que inicializa un proyecto NestJS,
-con la configuración inicial para que solo tengamos que preocuparnos de empezar nuestra aplicación.
-
-Evita hacer toda la instalación inicial, y preocúpate solo de iniciar a desarrollar tu aplicación.
-
-Hace uso de docker, postgres y como gestor de paquetes se ha elegido yarn.
-
-Aunque puedes personalizar el proyecto ajustándolo a tus necesidades, modificando los típocos ficheros de configuración
-'.json' de la raiz del proyecto
+[Template-NestJS](https://github.com/Karmelo1984/template-nestJS) es una plantilla que simplifica el iniciar proyectos
+NestJS ya que proporciona una configuración inicial estandar para ahorrar tiempo en los primeros pasos. Utiliza Docker,
+PostgreSQL y Yarn. Además, es personalizable a través de típicos archivos JSON de configuración del proyecto.
 
 ## Características de este `TEMPLATE`
+
+1. `Configuración Inicial:`` Este template proporciona una configuración inicial completa para proyectos NestJS,
+   eliminando la necesidad de realizar la instalación y configuración inicial por separado.
+
+2. `Uso de Docker:` Utiliza Docker para gestionar el entorno de desarrollo, lo que facilita la gestión de contenedores y
+   la portabilidad del proyecto.
+
+3. `Base de Datos Postgres:` Incluye una base de datos PostgreSQL como parte de la configuración inicial, lo que permite
+   una integración sencilla con bases de datos relacionales.
+
+4. `Gestión de Paquetes con Yarn:` Se ha elegido Yarn como gestor de paquetes, lo que puede mejorar la velocidad de
+   instalación y gestión de dependencias.
+
+5. `Personalización Flexible:` Aunque el proyecto se inicia con una configuración predefinida, es altamente
+   personalizable. Puedes modificar los archivos de configuración JSON en la raíz del proyecto para adaptarlos a tus
+   necesidades específicas.
+
+6. `Fácil Inicio:` Con las instrucciones proporcionadas en este readme, puedes clonar el proyecto, instalar las
+   dependencias y configurar las variables de entorno en poco tiempo, lo que te permite comenzar a desarrollar tu
+   aplicación rápidamente.
 
 ## Ejecutar la aplicación
 
