@@ -3,9 +3,9 @@ version: '3'
 services:
    db:
       image: postgres:16.0
-      restart: always
+      restart: on-failure
       ports:
-         - '5432:5432'
+         - '${DB_PORT}:${DB_PORT}'
       environment:
          POSTGRES_PASSWORD: ${DB_PASSWORD}
          POSTGRES_DB: ${DB_DATABASE}

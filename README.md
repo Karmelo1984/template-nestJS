@@ -10,42 +10,45 @@ PostgreSQL y Yarn. Además, es personalizable a través de típicos archivos JSO
 
 ## Características de este `TEMPLATE`
 
-1. `Configuración Inicial:` Este template proporciona una configuración inicial completa para proyectos NestJS,
-   eliminando la necesidad de realizar la instalación y configuración inicial por separado.
+1. `Configuración Inicial:` Este proyecto sirve como base para proyectos NestJS, eliminando la necesidad de realizar la
+   instalación y configuración inicial.
 
-2. `Uso de Docker:` Utiliza Docker para gestionar el entorno de desarrollo, lo que facilita la gestión de contenedores y
-   la portabilidad del proyecto.
+2. `Uso de Docker:` Uso de Docker para gestionar el entorno de desarrollo.
 
-3. `Base de Datos Postgres:` Incluye una base de datos PostgreSQL como parte de la configuración inicial, lo que permite
-   una integración sencilla con bases de datos relacionales.
+3. `Base de Datos Postgres:` Incluye la configuración de una base de datos PostgreSQL como parte de la configuración
+   inicial.
 
-4. `Gestión de Paquetes con Yarn:` Se ha elegido Yarn como gestor de paquetes, lo que puede mejorar la velocidad de
-   instalación y gestión de dependencias.
+4. `Gestión de Paquetes con Yarn:` Se ha optado por Yarn como gestor de paquetes.
 
 5. `Personalización Flexible:` Aunque el proyecto se inicia con una configuración predefinida, es altamente
-   personalizable. Puedes modificar los archivos de configuración JSON en la raíz del proyecto para adaptarlos a tus
-   necesidades específicas.
+   personalizable modificando los típicos ficheros de configuración **JSON**, adaptándolos a tus necesidades
+   específicas.
 
-6. `Fácil Inicio:` Con las instrucciones proporcionadas en este readme, puedes clonar el proyecto, instalar las
-   dependencias y configurar las variables de entorno en poco tiempo, lo que te permite comenzar a desarrollar tu
-   aplicación rápidamente.
-
-7. [Estandariza los Commits:](https://medium.com/nosolosoftware/estandariza-tus-commits-y-automatiza-tu-changelog-con-estas-herramientas-bb83c404f02f)
-   Este template fomenta el uso de mensajes de commit estandarizados siguiendo convenciones específicas, lo que mejora
-   la claridad y la trazabilidad de tus cambios en el repositorio. Para ello implementa:
+6. [`Estandarización de Commits:`](https://medium.com/nosolosoftware/estandariza-tus-commits-y-automatiza-tu-changelog-con-estas-herramientas-bb83c404f02f)
+   Este template fomenta el uso de mensajes de commit estandarizados para mejorar la trazabilidad de los cambios en el
+   repositorio. Para ello implementa:
 
    -  **Commitlint:** Determina si un mensaje de commit se adecúa a un estándar en concreto
    -  **Husky:** Ejecuta Commitlint antes de cada commit. Abortará el commit en caso de que el mensaje escrito no se
       adapte al estándar de Commitlint.
    -  **Commitizen:** Genera mensajes compatibles con Commitlint de una forma sencilla, a través de un wizard.
 
-8. [Automatiza el Changelog:](https://medium.com/nosolosoftware/estandariza-tus-commits-y-automatiza-tu-changelog-con-estas-herramientas-bb83c404f02f)
-   Utiliza herramientas como [standard-version](https://github.com/conventional-changelog/standard-version) para
-   automatizar la generación de changelogs basados en los mensajes de commit, lo que simplifica la documentación de tus
-   cambios. Para ello hace uso de:
+7. [`Automatiza el Changelog:`](https://medium.com/nosolosoftware/estandariza-tus-commits-y-automatiza-tu-changelog-con-estas-herramientas-bb83c404f02f)
+   Automatización de la generación de changelogs basados en los mensajes de commit, lo que simplifica la documentación
+   de los cambios. Se hace uso de:
 
-   -  **Standard-version:** Se encarga de procesar los mensajes de commit para generar un Changelog y subir la versión
-      del proyecto.
+   -  **[standard-version](https://github.com/conventional-changelog/standard-version)** Se encarga de procesar los
+      mensajes de commit para generar un Changelog y subir la versión del proyecto.
+
+## Aplicaciones necesarias
+
+Para poder inicializar este template sin problemas, es necesario que revises e instales las siguientes aplicaciones.
+
+```bash
+   node --version      --> `v18.17.1`
+   npm --version       --> `v9.6.7`
+   docker --version    --> `24.0.6, build ed223bcs`
+```
 
 ## Ejecutar la aplicación
 
@@ -82,21 +85,23 @@ PostgreSQL y Yarn. Además, es personalizable a través de típicos archivos JSO
 
 ## [¿Cómo hacer commits estandarizados?](https://medium.com/nosolosoftware/estandariza-tus-commits-y-automatiza-tu-changelog-con-estas-herramientas-bb83c404f02f)
 
-Para agregar archivos/carpetas a un commit en GIT, usaremos las formas usuales.
+1. Los commits se hacen a partir del CLI de git para registrar los cambios de archivos/carpetas en el repositorio. Se
+   pueden usar las formas usuales.
 
-```bash
-   git add archivo1.js archivo2.js ## Agrega archivos específicos.
-   git add "*.js" ## Agrega archivos por patrones.
-   git add -p ## Agrega cambios de forma interactiva.
-   git add directorio/ ## Agrega todos los archivos en un directorio.
-```
+   ```bash
+      git add archivo1.js archivo2.js ## Agrega archivos específicos.
+      git add "*.js" ## Agrega archivos por patrones.
+      git add -p ## Agrega cambios de forma interactiva.
+      git add directorio/ ## Agrega todos los archivos en un directorio.
+   ```
 
-Después usaremos el siguiente comando para abrir el wizard de commitizien, donde solo tendremos que seguir los pasos que
-nos indica.
+2. Con el siguiente comando abrimos el wizard de commitizien, donde solo tendremos que seguir los pasos.
 
-```bash
-   yarn cz
-```
+   ```bash
+      yarn cz
+   ```
+
+3. Después haremos **push** al repositorio, bien a través de **CLI**, **github desktop** o **gitkraken**.
 
 ## [¿Cómo lanzar una versión nueva?](https://medium.com/nosolosoftware/estandariza-tus-commits-y-automatiza-tu-changelog-con-estas-herramientas-bb83c404f02f)
 
@@ -112,7 +117,8 @@ Después para cada versión siguiente, solo tendremos que ejecutar:
    yarn run release
 ```
 
-La subida de versión tiene en cuenta, entre otras, estas cosas:
+La subida de versión se hace forma automática a partir del fichero **package.json** de nuestro proyecto, y tiene en
+cuenta, entre otros:
 
 -  La versión se especifica como **MAJOR.MINOR.PATCH**.
 -  Si entre una versión y la siguiente sólo hay commits de **fix**, se incrementará la versión **PATCH**.
@@ -123,6 +129,29 @@ La subida de versión tiene en cuenta, entre otras, estas cosas:
 
 Por defecto, en el changelog, sólo se incluyen los commits que marquen un **BREAKING CHANGE**, **feat** y **fix**.
 Aunque esto es posible configurarlo a gusto en la propia herramienta.
+
+## A tener en cuenta en la configuración
+
+Prettier ha sido configurado con los siguientes parámetros:
+
+```json
+{
+   "arrowParens": "always", // Siempre utiliza paréntesis alrededor de los parámetros de funciones flecha.
+   "bracketSpacing": true, // Coloca espacios en blanco alrededor de las llaves en objetos.
+   "endOfLine": "lf", // Usa saltos de línea Unix (LF) en lugar de saltos de línea Windows (CRLF).
+   "jsxBracketSameLine": false, // Coloca el corchete de apertura de JSX en una línea nueva.
+   "jsxSingleQuote": false, // Utiliza comillas dobles en lugar de comillas simples en JSX.
+   "printWidth": 120, // Establece la longitud máxima de línea en 120 caracteres.
+   "proseWrap": "always", // Envuelve siempre el texto en markdown y comentarios.
+   "quoteProps": "as-needed", // Cita las propiedades de los objetos solo cuando sea necesario.
+   "requirePragma": false, // No requiere un comentario especial para formatear.
+   "semi": true, // Siempre añade punto y coma al final de las declaraciones.
+   "singleQuote": true, // Utiliza comillas simples en lugar de comillas dobles.
+   "tabWidth": 3, // Establece el tamaño de la sangría en 3 espacios.
+   "trailingComma": "all", // Coloca comas finales en objetos y arrays multilinea.
+   "useTabs": false // Utiliza espacios en lugar de tabuladores.
+}
+```
 
 ## Contacto
 
